@@ -7,6 +7,7 @@ export const Container = styled.div`
   table {
     width: 100%;
     border-spacing: 0 0.5rem;
+    padding: 0 1rem;
 
     th {
       color: var(--text-body);
@@ -32,5 +33,9 @@ export const Container = styled.div`
         color: var(--red);
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    overflow-x: auto;
   }
 `;

@@ -30,4 +30,8 @@ export const Container = styled.div`
       color: var(--shape);
     }
   }
+
+  @media (max-width: 775px) {
+    grid-template-columns: 1fr;
+  }
 `;

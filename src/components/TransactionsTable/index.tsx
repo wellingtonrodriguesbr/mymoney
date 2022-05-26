@@ -7,9 +7,9 @@ export const TransactionsTable = () => {
     const { data } = await api.get("/transactions");
     console.log(data);
   }
-  useEffect(() => {
+  /* useEffect(() => {
     getTransactions();
-  }, []);
+  }, []); */
 
   return (
     <Container>
