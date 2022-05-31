@@ -3,6 +3,7 @@ import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
 import { NewTransactionModal } from "./components/NewTransactionModal";
 import { TransactionsTable } from "./components/TransactionsTable";
+import { TransactionsProvider } from "./contexts/TransactionsContext";
 import { GlobalStyle } from "./styles/global";
 
 export const App = () => {
@@ -18,7 +19,7 @@ export const App = () => {
   }
 
   return (
-    <>
+    <TransactionsProvider>
       <Header handleNewTransactionModalOpen={handleNewTransactionModalOpen} />
       <Dashboard />
       <TransactionsTable />
@@ -27,6 +28,6 @@ export const App = () => {
         handleNewTransactionModalClose={handleNewTransactionModalClose}
       />
       <GlobalStyle />
-    </>
+    </TransactionsProvider>
   );
 };
